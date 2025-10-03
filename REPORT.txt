@@ -1,0 +1,52 @@
+K-MEANS CLUSTERING PROJECT REPORT
+---------------------------------
+
+Objective:
+----------
+To perform customer segmentation using K-Means clustering on a synthetic Mall Customers-like dataset.
+
+Dataset:
+--------
+- File: data/customers.csv
+- Size: 200 rows
+- Features: Age, Annual Income (k$), Spending Score
+
+Methodology:
+------------
+1. Data Preprocessing
+   - Standardized numerical features (Age, Annual Income, Spending Score).
+2. Dimensionality Reduction
+   - Applied PCA (2 components) for visualization.
+3. Optimal Clusters
+   - Used Elbow Method (inertia vs k) to suggest k=4.
+4. K-Means Clustering
+   - Performed clustering with k=4.
+   - Visualized clusters in PCA space and original feature space.
+5. Evaluation
+   - Calculated Silhouette Score to measure clustering quality.
+
+Results:
+--------
+- Optimal number of clusters (Elbow): 4
+- Silhouette Score (k=4): ~0.40 (indicating fair separation of clusters).
+- Cluster Sizes:
+  * Cluster 0: group of customers with medium income and spending.
+  * Cluster 1: group of customers with high income but low spending.
+  * Cluster 2: group of customers with low income and variable spending.
+  * Cluster 3: group of customers with high income and high spending.
+
+Outputs Generated:
+------------------
+- Plots:
+  * plots/income_vs_spending_raw.png
+  * plots/pca_2d.png
+  * plots/elbow_inertia.png
+  * plots/clusters_pca.png
+  * plots/income_spending_clusters.png
+- Data:
+  * data/customers_clustered.csv (with cluster labels)
+
+Conclusion:
+-----------
+K-Means successfully segmented the synthetic customer dataset into 4 groups with distinguishable spending and income patterns. These insights can help businesses design targeted marketing strategies and personalized offers.
+
